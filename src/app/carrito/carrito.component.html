@@ -40,8 +40,8 @@
 </nav>
 <!-- {{carrito|json}}-->
 <div class="row">
-  <div class="col-sm-3">
-    <div *ngFor="let stock of carrito | filter: searchText" class="thumbnail">
+  <div >
+    <div *ngFor="let stock of carrito | filter: searchText" class="thumbnail col-sm-4">
       <img src="{{stock.imagen}}" alt="{{stock.nombre}}">
       <div class="caption">
         <p>{{stock.descripcion}}</p>

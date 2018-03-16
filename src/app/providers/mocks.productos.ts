@@ -56,7 +56,7 @@ export class MOCKS_Productos {
 		"id": 7,
 		"nombre": "MAHOU 5 ESTRELLAS cerveza rubia nacional pack 12 latas 33 cl",
 		"precio": 5.55,
-		"imagen": "https://s3.dia.es/medias/he3/h0c/9136129081374.jpg",
+		"imagen": "https://elsuper.vteximg.com.br/arquivos/ids/261952-300-300/pack.jpg?v=636493635962330000",
 		"oferta": 0,
 		"descripcion": "1/Litro"
 	},
