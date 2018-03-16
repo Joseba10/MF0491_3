@@ -9,6 +9,7 @@ import { CarritoProductosService } from "../providers/carritoproductos";
 })
 export class CarritoComponent implements OnInit {
   carrito: Carrito[];
+  carritocantidad: Carrito;
   //Campo del Filtro
   searchText: string;
 
@@ -17,8 +18,13 @@ export class CarritoComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log("TodosComponent ngOnInit");
+    console.log("CarritoComponent ngOnInit");
 
     this.carrito = this.carritoService.getAll();
+  }
+
+  sumar() {
+    console.log("Click sumar");
+    this.carritocantidad.cantidad++;
   }
 }

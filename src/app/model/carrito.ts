@@ -7,6 +7,9 @@ export class Carrito {
   precio: number;
   oferta: number;
   descripcion: string;
+  descuento: boolean;
+  descuentocantidad: number;
+  cantidad: number;
 
   //Constructor
   constructor(nombre: string) {
@@ -16,5 +19,12 @@ export class Carrito {
     this.precio = 0;
     this.oferta = 0;
     this.descripcion = "";
+    this.cantidad = 1;
+    this.descuento = false;
+    this.descuentocantidad = 0;
+    /* if (this.precio > this.oferta) {
+      this.descuento = true;
+      this.descuentocantidad = (this.precio * 100 / this.oferta;
+    } */
   }
 }

@@ -7,7 +7,8 @@ export class MOCKS_Productos {
 		"precio": 13.75,
 		"imagen": "https://www.fortunaonline.net/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/r/s/rsqgin009-beefeater-london-dry-gin-1l.png",
 		"oferta": 12.75,
-		"descripcion": "18.50/Litro"
+		"descripcion": "18.50/Litro",
+		"cantidad": 1
 		
 	},
 	{
@@ -16,7 +17,8 @@ export class MOCKS_Productos {
 		"precio": 1.75,
 		"imagen": "https://st2.tudespensa.com/rep/7983/imagenes/33952/122/maiz-dulce-bonduelle-lata-facil-apertura-pack3x140-gr-peso-ne.jpg",
 		"oferta": 0,
-		"descripcion": "1/Kilo"
+		"descripcion": "1/Kilo",
+		"cantidad": 1
 	},
 	{
 		"id": 3,
@@ -24,7 +26,8 @@ export class MOCKS_Productos {
 		"precio": 3.75,
 		"imagen": "https://st2.tudespensa.com/rep/e1bd/imagenes/37114/122/tomate-natural-triturado-cidacos-lata-800-gr.jpg",
 		"oferta": 0,
-		"descripcion": "2/Kilo"
+		"descripcion": "2/Kilo",
+		"cantidad": 1
 	},
 
 	{
@@ -33,7 +36,8 @@ export class MOCKS_Productos {
 		"precio": 6.75,
 		"imagen": "https://st1.tudespensa.com/rep/9c8c/imagenes/58107/122/esparrago-blanco-ecologico-ekolo.jpg",
 		"oferta": 0,
-		"descripcion": "5/Kilo"
+		"descripcion": "5/Kilo",
+		"cantidad": 1
 	
 	},
 	{
@@ -42,7 +46,8 @@ export class MOCKS_Productos {
 		"precio": 5.75,
 		"imagen": "https://st2.tudespensa.com/rep/805a/imagenes/41047/122/habitas-tiernas-extra---extra-finas-gvtarra-frasco-210-gr-peso-neto-escurrido.jpg",
 		"oferta": 0,
-		"descripcion": "4/Kilo"
+		"descripcion": "4/Kilo",
+		"cantidad": 1
 	},
 	{
 		"id": 6,
@@ -50,7 +55,8 @@ export class MOCKS_Productos {
 		"precio": 2.75,
 		"imagen": "https://st1.tudespensa.com/rep/9447/imagenes/78261/122/arroz-redondo-sos.jpg",
 		"oferta": 0,
-		"descripcion": "1/Kilo"
+		"descripcion": "1/Kilo",
+		"cantidad": 1
 	},
 	{
 		"id": 7,
@@ -58,7 +64,8 @@ export class MOCKS_Productos {
 		"precio": 5.55,
 		"imagen": "https://elsuper.vteximg.com.br/arquivos/ids/261952-300-300/pack.jpg?v=636493635962330000",
 		"oferta": 0,
-		"descripcion": "1/Litro"
+		"descripcion": "1/Litro",
+		"cantidad": 1
 	},
 	{
 		"id": 8,
@@ -66,7 +73,8 @@ export class MOCKS_Productos {
 		"precio": 5.75,
 		"imagen": "https://st1.tudespensa.com/rep/4fd6/imagenes/44595/122/giovanni-rana-ravioli-de-jamon-y-queso-bolsa-250-gr.jpg",
 		"oferta": 0,
-		"descripcion": "1/Kilo"
+		"descripcion": "1/Kilo",
+		"cantidad": 1
 	},
 	{
 		"id": 9,
@@ -74,7 +82,8 @@ export class MOCKS_Productos {
 		"precio": 4.75,
 		"imagen": "https://st1.tudespensa.com/rep/531c/imagenes/77106/122/garbanzo-luengo.jpg",
 		"oferta": 0,
-		"descripcion": "3/Kilo"
+		"descripcion": "3/Kilo",
+		"cantidad": 1
 	},
 
 	{
@@ -83,7 +92,8 @@ export class MOCKS_Productos {
 		"precio": 1.75,
 		"imagen": "https://st3.tudespensa.com/rep/2da6/imagenes/136343/122/quinoa-ecologica-ecocesta.jpg",
 		"oferta": 0,
-		"descripcion": "1/Kilo"
+		"descripcion": "1/Kilo",
+		"cantidad": 1
 	}
 
 
