@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from "@angular/forms";
 
 //Componentes
 import { AppComponent } from "./app.component";
@@ -12,7 +12,6 @@ import { CarritoProductosService } from "./providers/carritoproductos";
 
 //Para que funcione ngModel
 
-
 //Pipes/Filtros
 import { NombreFilter } from "./pipes/nombrefilter";
 
@@ -22,9 +21,8 @@ import { NombreFilter } from "./pipes/nombrefilter";
     CarritoComponent,
     ListadoComponent,
     NombreFilter
-    
   ],
-  imports: [BrowserModule,FormsModule,],
+  imports: [BrowserModule, FormsModule],
   providers: [CarritoProductosService],
   bootstrap: [AppComponent]
 })
