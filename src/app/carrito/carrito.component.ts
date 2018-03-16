@@ -9,7 +9,7 @@ import { CarritoProductosService } from '../providers/carritoproductos';
 })
 export class CarritoComponent implements OnInit {
 
-  
+
 carrito: Carrito[];
 
 
@@ -35,10 +35,9 @@ this.carrito=[];
       carritos= new Carrito(  carritos.nombre = el.nombre);
     
       carritos.precio = el.precio;
-  
       carritos.imagen = el.imagen;
       carritos.oferta = el.oferta;
-     
+      carritos.descripcion = el.descripcion;
       this.carrito.push(carritos);
     });
 

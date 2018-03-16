@@ -22,7 +22,7 @@ export class CarritoProductosService {
       producto.imagen = el.imagen;
       producto.precio = el.precio;
       producto.oferta = el.oferta;
-
+      producto.descripcion= el.descripcion;
       this.productos.push(producto);
     });
 

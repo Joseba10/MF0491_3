@@ -33,11 +33,11 @@
 </nav>
 {{carrito|json}}
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-sm-3">
       <div  *ngFor="let stock of carrito" class="thumbnail">
-        <img src="{{stock.imagen}}" alt="...">
+        <img src="{{stock.imagen}}" alt="{{stock.nombre}}">
         <div class="caption">
-          
+            <p>{{stock.descripcion}}</p>
           <p>{{stock.precio}} {{stock.oferta}}</p>
           <p>{{stock.nombre}}</p>
           <p><a href="#" class="btn btn-primary" role="button">Añadir al carro</a></p>
