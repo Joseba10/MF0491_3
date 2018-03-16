@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import {FormsModule} from '@angular/forms';
 
 //Componentes
 import { AppComponent } from "./app.component";
@@ -8,10 +9,12 @@ import { ListadoComponent } from "./carrito/listado/listado.component";
 
 //Servicios
 import { CarritoProductosService } from "./providers/carritoproductos";
-import { NombreFilter } from "./pipes/nombrefilter";
+
+//Para que funcione ngModel
+
 
 //Pipes/Filtros
-
+import { NombreFilter } from "./pipes/nombrefilter";
 
 @NgModule({
   declarations: [
@@ -19,8 +22,9 @@ import { NombreFilter } from "./pipes/nombrefilter";
     CarritoComponent,
     ListadoComponent,
     NombreFilter
+    
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule,FormsModule,],
   providers: [CarritoProductosService],
   bootstrap: [AppComponent]
 })

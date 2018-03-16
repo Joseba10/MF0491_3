@@ -2,46 +2,57 @@
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+        aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
- 
+
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-inverse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#">Supermercado </a></li>
-       
-       
+        <li>
+          <a href="#">Supermercado </a>
+        </li>
+
+
       </ul>
-      <form class="navbar-form navbar-left">
+     
         <div class="form-group">
-          <input type="search" class="form-control" placeholder="Search">
+          <input type="search" [(ngModel)]="searchText" class="form-control" placeholder="Search">
         </div>
-       
-      </form>
+
+    
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Desplegable</a></li>
-       
+        <li>
+          <a href="#">Desplegable</a>
+        </li>
+
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
 </nav>
 <!-- {{carrito|json}}-->
 <div class="row">
-    <div class="col-sm-3">
-      <div  *ngFor="let stock of carrito | filter: searchText" class="thumbnail">
-        <img src="{{stock.imagen}}" alt="{{stock.nombre}}">
-        <div class="caption">
-            <p>{{stock.descripcion}}</p>
-          <p>{{stock.precio}} € <span>{{stock.oferta}} €</span></p>
-          <p>{{stock.nombre}}</p>
-          <p><a href="#" class="btn btn-primary" role="button">Añadir al carro</a></p>
-        </div>
+  <div class="col-sm-3">
+    <div *ngFor="let stock of carrito | filter: searchText" class="thumbnail">
+      <img src="{{stock.imagen}}" alt="{{stock.nombre}}">
+      <div class="caption">
+        <p>{{stock.descripcion}}</p>
+        <p>{{stock.precio}} €
+          <span>{{stock.oferta}} €</span>
+        </p>
+        <p>{{stock.nombre}}</p>
+        <p>
+          <a href="#" class="btn btn-primary" role="button">Añadir al carro</a>
+        </p>
       </div>
     </div>
   </div>
+</div>

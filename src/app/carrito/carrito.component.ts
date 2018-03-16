@@ -9,8 +9,8 @@ import { CarritoProductosService } from "../providers/carritoproductos";
 })
 export class CarritoComponent implements OnInit {
   carrito: Carrito[];
-//Campo del Filtro
-  searchText:string;
+  //Campo del Filtro
+  searchText: string;
 
   constructor(public carritoService: CarritoProductosService) {
     this.carrito = [];
