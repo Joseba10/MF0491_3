@@ -6,7 +6,7 @@ export class MOCKS_Productos {
 		"nombre": "Befeeter ginebra inglesa botella",
 		"precio": 13.75,
 		"imagen": "https://www.fortunaonline.net/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/r/s/rsqgin009-beefeater-london-dry-gin-1l.png",
-		"descuento": 20,
+		"descuento": 20
 		
 	},
 	{
