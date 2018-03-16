@@ -42,14 +42,21 @@
 <div class="row">
   <div>
     <div *ngFor="let stock of carrito | filter: searchText" class="thumbnail col-sm-4">
+  
+      <!--Recoge el porcentaje calculado -->
+      
       <button class="btn btn-danger">{{stock.descuentocantidad}} %</button>
       <img src="{{stock.imagen}}" alt="{{stock.nombre}}">
       <div class="caption">
         <p>{{stock.descripcion}}</p>
+
         <p>{{stock.precio}} €
           <span>{{stock.oferta}} €</span>
         </p>
+
         <p>{{stock.nombre}}</p>
+
+<!--Se agrega la cantidad que quieres con la funcion de sumar -->
 
         <span class="label label-default" (click)="sumar()">- {{stock.cantidad}} +</span>
         <p>

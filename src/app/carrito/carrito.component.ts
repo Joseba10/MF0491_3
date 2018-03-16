@@ -22,7 +22,8 @@ export class CarritoComponent implements OnInit {
 
     this.carrito = this.carritoService.getAll();
   }
-
+  
+//Metodo para sumar la cantidad de productos que quieres
   sumar() {
     console.log("Click sumar");
     this.carritocantidad.cantidad++;

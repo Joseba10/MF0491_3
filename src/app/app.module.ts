@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
+
 
 //Componentes
 import { AppComponent } from "./app.component";
@@ -11,7 +11,7 @@ import { ListadoComponent } from "./carrito/listado/listado.component";
 import { CarritoProductosService } from "./providers/carritoproductos";
 
 //Para que funcione ngModel
-
+import { FormsModule } from "@angular/forms";
 //Pipes/Filtros
 import { NombreFilter } from "./pipes/nombrefilter";
 

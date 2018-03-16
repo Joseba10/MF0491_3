@@ -8,9 +8,11 @@ export class NombreFilter implements PipeTransform {
   /**
    * Filtro para buscar en una coleccion de Productos. No es CaseSensitive.
    * @param stock : Productos[]
-   * @param searchText : string con el nombre a buscar
+   * @param searchText 
    */
 
+   //Filtro para buscar por el nombre del Producto
+   
   transform(stock: Carrito[], searchText: string): Carrito[] {
     if (!stock) return [];
     if (!searchText) return stock;
