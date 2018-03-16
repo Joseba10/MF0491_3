@@ -31,15 +31,16 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
+{{carrito|json}}
 <div class="row">
     <div class="col-md-4">
-      <div class="thumbnail">
-        <img src="..." alt="...">
+      <div  *ngFor="let stock of carrito" class="thumbnail">
+        <img src="{{stock.imagen}}" alt="...">
         <div class="caption">
-          <h3>Thumbnail label</h3>
-          <p>...</p>
-          <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+          
+          <p>{{stock.precio}} {{stock.oferta}}</p>
+          <p>{{stock.nombre}}</p>
+          <p><a href="#" class="btn btn-primary" role="button">Añadir al carro</a></p>
         </div>
       </div>
     </div>

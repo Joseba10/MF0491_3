@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Carrito } from '../model/carrito';
+import { CarritoProductosService } from '../providers/carritoproductos';
 
 @Component({
   selector: 'app-carrito',
@@ -7,9 +9,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarritoComponent implements OnInit {
 
-  constructor() { }
+  
+carrito: Carrito[];
+
+
+  constructor(public carritoService: CarritoProductosService) { 
+
+this.carrito=[];
+
+
+
+  }
 
   ngOnInit() {
+
+    console.log('TodosComponent ngOnInit');
+
+    this.carrito=this.carritoService.getAll();
   }
+
+  mapeo(result: any) {
+
+    let carritos: Carrito;
+    result.forEach(el => {
+      carritos= new Carrito(  carritos.nombre = el.nombre);
+    
+      carritos.precio = el.precio;
+  
+      carritos.imagen = el.imagen;
+      carritos.oferta = el.oferta;
+     
+      this.carrito.push(carritos);
+    });
+
+}
 
 }
