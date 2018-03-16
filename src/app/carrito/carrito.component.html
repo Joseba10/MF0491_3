@@ -22,7 +22,7 @@
         <div class="form-group">
           <input type="search" class="form-control" placeholder="Search">
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+       
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Desplegable</a></li>
@@ -31,14 +31,14 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-{{carrito|json}}
+<!-- {{carrito|json}}-->
 <div class="row">
     <div class="col-sm-3">
-      <div  *ngFor="let stock of carrito" class="thumbnail">
+      <div  *ngFor="let stock of carrito | filter: searchText" class="thumbnail">
         <img src="{{stock.imagen}}" alt="{{stock.nombre}}">
         <div class="caption">
             <p>{{stock.descripcion}}</p>
-          <p>{{stock.precio}} {{stock.oferta}}</p>
+          <p>{{stock.precio}} € <span>{{stock.oferta}} €</span></p>
           <p>{{stock.nombre}}</p>
           <p><a href="#" class="btn btn-primary" role="button">Añadir al carro</a></p>
         </div>

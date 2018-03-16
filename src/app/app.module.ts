@@ -1,25 +1,27 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
 //Componentes
-import { AppComponent } from './app.component';
-import { CarritoComponent } from './carrito/carrito.component';
-import { ListadoComponent } from './carrito/listado/listado.component';
+import { AppComponent } from "./app.component";
+import { CarritoComponent } from "./carrito/carrito.component";
+import { ListadoComponent } from "./carrito/listado/listado.component";
 
 //Servicios
-import { CarritoProductosService } from './providers/carritoproductos';
+import { CarritoProductosService } from "./providers/carritoproductos";
+import { NombreFilter } from "./pipes/nombrefilter";
+
+//Pipes/Filtros
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CarritoComponent,
-    ListadoComponent
+    ListadoComponent,
+    NombreFilter
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule],
   providers: [CarritoProductosService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
