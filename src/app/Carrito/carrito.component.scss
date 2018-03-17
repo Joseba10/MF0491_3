@@ -1,0 +1,57 @@
+.caption p span {
+  color: red;
+}
+
+.form-group input {
+  width: 500px;
+  margin-top: 10px;
+}
+
+.navbar-right li {
+  margin-top: -50px;
+}
+
+.thumbnail img {
+  height: 200px;
+  width: 200px;
+}
+
+.thumbnail span.badge{
+
+  /*Importante el atributo position absolute,si no lo pones el catalogo se descoloca,ya que algunos tienen el porcentaje y otros no,
+    lo que hace que se descuadren las cajas al ser una mas grande que las otras*/
+
+  position: absolute;
+  width: 70px;
+  background-color: red;
+  font-weight: bold;
+  height: 25px;
+  padding-top: 5px;
+  font-size: 15px;
+  margin-left: -100px;
+
+
+}
+
+.thumbnail {
+  position: relative;
+
+  text-align: center;
+}
+.navbar-nav li a{
+
+  color: white;
+  font-size: 19px;
+
+}
+
+.form-group button {
+
+  margin-left: 500px;
+  margin-top: -90px;
+}
+.navbar-inverse ul li a{
+
+  margin-left: 600px;
+
+}

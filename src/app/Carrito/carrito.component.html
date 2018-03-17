@@ -1,0 +1,74 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+        aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-inverse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#">Supermercado </a>
+        </li>
+
+
+      </ul>
+
+      <div class="form-group">
+        
+        <input type="search" [(ngModel)]="searchText" class="form-control" placeholder="Search">
+        <button>
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+      </div>
+
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#">Desplegable</a>
+        </li>
+
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<!-- {{carrito|json}}-->
+<div class="row">
+  <div>
+    <div *ngFor="let stock of carrito | filter: searchText" class="thumbnail col-sm-4">
+  
+      <!--Recoge el porcentaje calculado -->
+
+      <!--Una vez consigamos el porcentaje con muchos decimales lo redondeamos para que se pueda ver mas claro -->
+      
+      <span class="badge" *ngIf="stock.descuento">{{((stock.precio/stock.oferta)-1)*100 | redondear}}  %</span> <!--Forma de Calcular ((precioviejo/precionuevo)-1) *100  -->
+      <img src="{{stock.imagen}}" alt="{{stock.nombre}}">
+      <div class="caption">
+        <p>{{stock.descripcion}}</p>
+
+        <p>{{stock.precio}} €
+          <span *ngIf="stock.oferta>0">{{stock.oferta}} €</span> <!--Si la oferta es mayor que cero aparece en pantalla si nos no aparece -->
+        </p>
+
+        <p>{{stock.nombre}}</p>
+
+<!--Se agrega la cantidad que quieres con la funcion de sumar -->
+
+        <span class="label label-default" (click)="sumar()">- {{stock.cantidad}} +</span>
+        <p>
+          <a href="#" class="btn btn-success" role="button">Añadir al carro</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
