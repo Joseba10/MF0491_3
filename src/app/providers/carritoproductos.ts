@@ -9,7 +9,9 @@ export class CarritoProductosService {
     console.log("CarritoProductosService constructor");
   }
 
-  getAll(): Carrito[] {
+  getAll(): Carrito[] 
+ 
+  {
     console.log("RecetasService getAll");
     let jsonData = JSON.parse(MOCKS_Productos.stockproductos); //Parsear los datos de los productos
     this.productos = [];
@@ -17,16 +19,17 @@ export class CarritoProductosService {
 
     //Recogemos los datos del JSON
 
-    jsonData.forEach(el => {
-      producto = new Carrito(el.nombre);
-      producto.imagen = el.imagen;
-      producto.precio = el.precio;
-      producto.oferta = el.oferta;
-      producto.descripcion = el.descripcion;
-      producto.cantidad = el.cantidad;
-      producto.descuento= el.descuento;
-      this.productos.push(producto);
-    });
+    jsonData.forEach(el => 
+      {
+        producto = new Carrito(el.nombre);
+        producto.imagen = el.imagen;
+        producto.precio = el.precio;
+        producto.oferta = el.oferta;
+        producto.descripcion = el.descripcion;
+        producto.cantidad = el.cantidad;
+        producto.descuento= el.descuento;
+        this.productos.push(producto);
+      });
 
     return this.productos;
   }

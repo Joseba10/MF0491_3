@@ -44,7 +44,7 @@
 </nav>
 <!-- {{carrito|json}}-->
 <div class="row">
-  <div>
+ 
     <div *ngFor="let stock of carrito | filter: searchText" class="thumbnail col-sm-4">
   
       <!--Recoge el porcentaje calculado -->
@@ -54,21 +54,27 @@
       <span class="badge" *ngIf="stock.descuento">{{((stock.precio/stock.oferta)-1)*100 | redondear}}  %</span> <!--Forma de Calcular ((precioviejo/precionuevo)-1) *100  -->
       <img src="{{stock.imagen}}" alt="{{stock.nombre}}">
       <div class="caption">
-        <p>{{stock.descripcion}}</p>
+       
 
-        <p>{{stock.precio}} €
+        <p id="precio">{{stock.precio}} €
           <span *ngIf="stock.oferta>0">{{stock.oferta}} €</span> <!--Si la oferta es mayor que cero aparece en pantalla si nos no aparece -->
         </p>
-
-        <p>{{stock.nombre}}</p>
+        <p id="descripcion">({{stock.descripcion}})</p>
+        <p id="nombre">{{stock.nombre}}</p>
 
 <!--Se agrega la cantidad que quieres con la funcion de sumar -->
+<div class="sumaresta">
+    
+  <button (click)="restar()">-</button>
+{{stock.cantidad}}
+<button  (click)="sumar()">+</button>
 
-        <span class="label label-default" (click)="sumar()">- {{stock.cantidad}} +</span>
+</div>
+      
         <p>
           <a href="#" class="btn btn-success" role="button">Añadir al carro</a>
         </p>
       </div>
     </div>
-  </div>
+  
 </div>

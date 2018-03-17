@@ -13,7 +13,8 @@ export class NombreFilter implements PipeTransform {
 
    //Filtro para buscar por el nombre del Producto
    
-  transform(stock: Carrito[], searchText: string): Carrito[] {
+  transform(stock: Carrito[], searchText: string): Carrito[] 
+  {
     if (!stock) return [];
     if (!searchText) return stock;
     searchText = searchText.toLowerCase();
