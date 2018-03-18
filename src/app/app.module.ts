@@ -1,5 +1,5 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+
 
 //Componentes
 import { AppComponent } from "./app.component";
@@ -10,6 +10,7 @@ import { CarritoComponent } from "./Supermercado/Carrito/carrito.component";
 import { ProductosService } from "./providers/productos";
 
 //Para que funcione ngModel
+import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 //Pipes/Filtros
