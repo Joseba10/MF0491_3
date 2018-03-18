@@ -1,6 +1,5 @@
 import { BrowserModule } from "@angular/platform-browser";
 
-
 //Componentes
 import { AppComponent } from "./app.component";
 import { SupermercadoComponent } from "./Supermercado/supermercado.component";
@@ -16,8 +15,6 @@ import { FormsModule } from "@angular/forms";
 //Pipes/Filtros
 import { NombreFilter } from "./pipes/nombrefilter";
 import { RoundPipe } from "./pipes/redondear";
-
-
 
 @NgModule(
   {
