@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from "@angular/core";
-import { Carrito } from "../model/carrito";
+import { Producto } from "../model/producto";
 
 @Pipe({
   name: "filter"
@@ -13,7 +13,7 @@ export class NombreFilter implements PipeTransform {
 
    //Filtro para buscar por el nombre del Producto
    
-  transform(stock: Carrito[], searchText: string): Carrito[] 
+  transform(stock: Producto[], searchText: string): Producto[] 
   {
     if (!stock) return [];
     if (!searchText) return stock;

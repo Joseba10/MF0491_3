@@ -3,11 +3,11 @@ import { NgModule } from "@angular/core";
 
 //Componentes
 import { AppComponent } from "./app.component";
-import { CarritoComponent } from "./carrito/carrito.component";
-import { ListadoComponent } from "./carrito/listado/listado.component";
+import { SupermercadoComponent } from "./Supermercado/supermercado.component";
+import { CarritoComponent } from "./Supermercado/Carrito/carrito.component";
 
 //Servicios
-import { CarritoProductosService } from "./providers/carritoproductos";
+import { ProductosService } from "./providers/productos";
 
 //Para que funcione ngModel
 import { FormsModule } from "@angular/forms";
@@ -16,18 +16,20 @@ import { FormsModule } from "@angular/forms";
 import { NombreFilter } from "./pipes/nombrefilter";
 import { RoundPipe } from "./pipes/redondear";
 
+
+
 @NgModule(
   {
      declarations: [
                     AppComponent,
+                    SupermercadoComponent,
                     CarritoComponent,
-                    ListadoComponent,
                     NombreFilter,
                     RoundPipe
                   ],
 
       imports: [BrowserModule, FormsModule],
-      providers: [CarritoProductosService],
+      providers: [ProductosService],
       bootstrap: [AppComponent]
 })
 export class AppModule {}

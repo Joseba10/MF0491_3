@@ -1,46 +1,47 @@
 import { Component, OnInit } from "@angular/core";
-import { Carrito } from "../model/carrito";
-import { CarritoProductosService } from "../providers/carritoproductos";
+
+import { Producto } from "../model/producto";
+import { ProductosService } from "../providers/productos";
 
 @Component({
-  selector: "app-carrito",
-  templateUrl: "./carrito.component.html",
-  styleUrls: ["./carrito.component.scss"]
+  selector: "app-supermercado",
+  templateUrl: "./supermercado.component.html",
+  styleUrls: ["./supermercado.component.scss"]
 })
-export class CarritoComponent implements OnInit
+export class SupermercadoComponent implements OnInit
  {
-  carrito: Carrito[];
-  carritocantidad: Carrito;
+  producto: Producto[];
+  productoscantidad: Producto;
   //Campo del Filtro
   searchText: string;
 
-  constructor(public carritoService: CarritoProductosService)
+  constructor(public productoService: ProductosService)
 
           {
-            this.carrito = [];
+            this.producto = [];
           }
 
   ngOnInit() {
               console.log("CarritoComponent ngOnInit");
-              this.carrito = this.carritoService.getAll();
+              this.producto = this.productoService.getAll();
               }
   
   //Metodo para sumar la cantidad de productos que quieres
   sumar() {
             console.log("Click sumar");
-            this.carritocantidad.cantidad++;
+            this.productoscantidad.cantidad++;
           }
   //Metodo para restar la cantidad de productos que quieres
   restar() {
              console.log("Click restar");
 
             //Si la cantidad es igual que 1 no hace nada,si es mayor resta la cantidad 1 vez
-            if(this.carritocantidad.cantidad===1)
+            if(this.productoscantidad.cantidad===1)
                {
 
              }
             else{
-                  this.carritocantidad.cantidad--;
+                  this.productoscantidad.cantidad--;
                 }
     
           }

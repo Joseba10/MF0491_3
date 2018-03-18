@@ -1,15 +1,16 @@
 import { Injectable } from "@angular/core";
-import { Carrito } from "../model/carrito";
-import { MOCKS_Productos } from "./mocks.productos";
 
-export class CarritoProductosService {
-  productos: Carrito[];
+import { MOCKS_Productos } from "./mocks.productos";
+import { Producto } from "../model/producto";
+
+export class ProductosService {
+  productos: Producto[];
 
   constructor() {
     console.log("CarritoProductosService constructor");
   }
 
-  getAll(): Carrito[] 
+  getAll(): Producto[] 
  
   {
     console.log("RecetasService getAll");
@@ -21,7 +22,7 @@ export class CarritoProductosService {
 
     jsonData.forEach(el => 
       {
-        producto = new Carrito(el.nombre);
+        producto = new Producto(el.nombre);
         producto.imagen = el.imagen;
         producto.precio = el.precio;
         producto.oferta = el.oferta;

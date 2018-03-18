@@ -1,5 +1,5 @@
 /* Clase para encapsular los atributos de un Receta */
-export class Carrito {
+export class Producto {
   //Atributos
   id: number;
   nombre: string;
