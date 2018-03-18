@@ -5,32 +5,30 @@
 //Estructura de navegador/Menu
 
 .navbar-inverse {
-  ul.navbar-nav {
-
-                
-                   li a{
-                    margin-left: 600px;
-                    color: white;
-                    font-size: 19px;
-                   }
-                }
-
- .form-group{ 
+                  ul.navbar-nav {
+                                  li a{
+                                         margin-left: 600px;
+                                         color: white;
+                                         font-size: 19px;
+                                      }
+                                 }
+                  .form-group{ 
    
-              input {
-                      width: 500px;
-                      margin-top: 10px;
-                    }
+                                input {
+                                        width: 500px;
+                                        margin-top: 10px;
+                                      }
 
-              button{
-                      margin-left: 500px;
-                      margin-top: -90px;
-                    }
-            }.navbar-right{ 
-                            li {
-                                  margin-top: -50px;
-                                }                  
-                          }
+                                button{
+                                        margin-left: 500px;
+                                        margin-top: -90px;
+                                      }
+                            }
+                  .navbar-right{ 
+                                  li {
+                                         margin-top: -50px;
+                                      }                  
+                              }
 }
 
 //Estructura del cuerpo
@@ -58,8 +56,8 @@
                         font-size: 15px;
                         margin-left: -300px;
                       }
-              .caption{ 
-                        
+
+            .caption{ 
                         p span {
                                 color: rgb(237, 90, 90);
                                 font-weight: bold;
@@ -79,8 +77,9 @@
                         p a.btn{
                                   margin-top: 10px;
                                 }
-                      }
-              .sumaresta{
+                    }
+
+            .sumaresta{
  
                         background-color:rgb(234, 232, 232);
                         width:100px;
