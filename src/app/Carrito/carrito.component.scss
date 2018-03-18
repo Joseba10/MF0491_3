@@ -35,12 +35,12 @@
 .thumbnail{
             position: relative;
             text-align: center;
-            
+
             img {
                   height: 200px;
                   width: 200px;
                 }
-
+                
             span.badge{
 
                         /*Importante el atributo position absolute,si no lo pones el catalogo se descoloca,ya que algunos tienen el porcentaje y otros no,
@@ -79,7 +79,6 @@
                     }
 
             .sumaresta{
- 
                         background-color:rgb(234, 232, 232);
                         width:100px;
                         padding: 5px;
@@ -87,7 +86,7 @@
                         -webkit-border-radius: 30px;
                         -moz-border-radius: 30px;
                         border-radius: 30px;
-            
+
                         button{
                                 background-color:rgb(234, 232, 232);
                               }
