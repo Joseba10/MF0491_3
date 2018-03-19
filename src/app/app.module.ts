@@ -28,5 +28,5 @@ import { RoundPipe } from "./pipes/redondear";
       imports: [BrowserModule, FormsModule],
       providers: [ProductosService],
       bootstrap: [AppComponent]
-})
+  })
 export class AppModule {}

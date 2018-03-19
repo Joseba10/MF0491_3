@@ -13,7 +13,8 @@ export class Producto {
   
 
   //Constructor
-  constructor(nombre: string) {
+  constructor(nombre: string) 
+  {
     this.nombre = nombre;
     this.imagen ="http://www.colgateprofesional.es/Professional/v1/es/es/locale-assets/img/heros/Products-Slider-Toothpaste.jpg";
     this.precio = 0;

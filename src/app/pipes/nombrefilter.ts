@@ -19,10 +19,11 @@ export class NombreFilter implements PipeTransform {
     if (!searchText) return stock;
     searchText = searchText.toLowerCase();
     let buscarnombre = "";
-    return stock.filter(it => {
-      buscarnombre = it.nombre;
-      buscarnombre = buscarnombre.toLowerCase();
-      return buscarnombre.includes(searchText);
-    });
+    return stock.filter(it =>
+       {
+          buscarnombre = it.nombre;
+          buscarnombre = buscarnombre.toLowerCase();
+          return buscarnombre.includes(searchText);
+       });
   }
 }
