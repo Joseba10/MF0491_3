@@ -3,7 +3,7 @@ import { BrowserModule } from "@angular/platform-browser";
 //Componentes
 import { AppComponent } from "./app.component";
 import { SupermercadoComponent } from "./Supermercado/supermercado.component";
-import { CarritoComponent } from "./Supermercado/Carrito/carrito.component";
+
 
 //Servicios
 import { ProductosService } from "./providers/productos";
@@ -21,7 +21,6 @@ import { RoundPipe } from "./pipes/redondear";
      declarations: [
                     AppComponent,
                     SupermercadoComponent,
-                    CarritoComponent,
                     NombreFilter,
                     RoundPipe
                   ],

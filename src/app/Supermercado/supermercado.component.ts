@@ -22,7 +22,7 @@ export class SupermercadoComponent implements OnInit
           }
 
   ngOnInit() {
-              console.log("CarritoComponent ngOnInit");
+              console.log("SupermercadoComponent ngOnInit");
               this.producto = this.productoService.getAll();
               }
   

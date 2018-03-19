@@ -7,7 +7,7 @@ export class ProductosService {
   productos: Producto[];
 
   constructor() {
-    console.log("CarritoProductosService constructor");
+    console.log("ProductosService constructor");
   }
 
   getAll(): Producto[] 
