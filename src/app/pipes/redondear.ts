@@ -5,7 +5,8 @@ import { Pipe , PipeTransform} from "@angular/core";
 @Pipe({name: 'redondear'})
 export class RoundPipe implements PipeTransform
  {
-    transform (input:number) {
-    return input.toFixed(2);
+    transform (input:number) 
+    {
+        return input.toFixed(2);
      }
 }
