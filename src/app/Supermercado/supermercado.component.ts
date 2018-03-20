@@ -29,6 +29,7 @@ export class SupermercadoComponent implements OnInit
   //Metodo para sumar la cantidad de productos que quieres
   sumar(cantidad) {
             console.log("Click sumar");
+            this.productoscantidad.cantidad= cantidad;
             this.productoscantidad.cantidad++;
           }
   //Metodo para restar la cantidad de productos que quieres
@@ -41,6 +42,7 @@ export class SupermercadoComponent implements OnInit
 
              }
             else{
+              this.productoscantidad.cantidad= cantidad;
                   this.productoscantidad.cantidad--;
                 }
     
