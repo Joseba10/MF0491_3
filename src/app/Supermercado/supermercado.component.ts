@@ -10,7 +10,7 @@ import { ProductosService } from "../providers/productos";
 })
 export class SupermercadoComponent implements OnInit
  {
-  producto: Producto[];
+  productos: Producto[];
   productoscantidad: Producto;
   //Campo del Filtro
   searchText: string;
@@ -18,24 +18,28 @@ export class SupermercadoComponent implements OnInit
   constructor(public productoService: ProductosService)
 
           {
-            this.producto = [];
+            this.productos = [];
+            this.productoscantidad= new Producto("");
           }
 
   ngOnInit() {
               console.log("SupermercadoComponent ngOnInit");
-              this.producto = this.productoService.getAll();
+          
+              this.productos = this.productoService.getAll();
               }
   
   //Metodo para sumar la cantidad de productos que quieres
   sumar(cantidad) {
-                    console.log("Click sumar");
+                 
                     this.productoscantidad.cantidad= cantidad;
                     this.productoscantidad.cantidad++;
+                    console.log("Click sumar", cantidad,this.productoscantidad.cantidad);
           }
   //Metodo para restar la cantidad de productos que quieres
   restar(cantidad) {
-             console.log("Click restar");
+      
              this.productoscantidad.cantidad= cantidad;
+     
             
              //Si la cantidad es igual que 1 no hace nada,si es mayor resta la cantidad 1 vez
             if(this.productoscantidad.cantidad==1)
@@ -45,6 +49,7 @@ export class SupermercadoComponent implements OnInit
             else{
                   this.productoscantidad.cantidad= cantidad;
                   this.productoscantidad.cantidad--;
+                  console.log("Click restar",cantidad,this.productoscantidad.cantidad);
                 }
     
           }
