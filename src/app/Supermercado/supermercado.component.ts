@@ -61,6 +61,7 @@ export class SupermercadoComponent implements OnInit
 
   agregarCarrito(producto){
 
-    
+    this.carrito=producto;
+    console.log("agregarCarrito",this.carrito);
   }
 }
