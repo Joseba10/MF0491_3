@@ -12,6 +12,7 @@ export class SupermercadoComponent implements OnInit
  {
   productos: Producto[];
   productoscantidad: Producto;
+  carrito:Producto[];
   //Campo del Filtro
   searchText: string;
 
@@ -20,6 +21,7 @@ export class SupermercadoComponent implements OnInit
           {
             this.productos = [];
             this.productoscantidad= new Producto("");
+            this.carrito= [];
           }
 
   ngOnInit() {
@@ -56,4 +58,9 @@ export class SupermercadoComponent implements OnInit
     console.log("mostrando contenido");
 
   }    
+
+  agregarCarrito(producto){
+
+    
+  }
 }
