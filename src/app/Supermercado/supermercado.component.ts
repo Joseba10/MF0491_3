@@ -50,4 +50,10 @@ export class SupermercadoComponent implements OnInit
                 }
     
           }
+
+  mostrar(){
+
+    console.log("mostrando contenido");
+
+  }    
 }

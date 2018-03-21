@@ -24,16 +24,18 @@
 
       <div class="form-group">
         
-        <input type="search" [(ngModel)]="searchText" class="form-control" placeholder="Search">
-        <button>
-            <i class="fa fa-search" aria-hidden="true"></i>
-          </button>
+        <input type="search" [(ngModel)]="searchText" class="form-control" placeholder="Buscar en Supermercado">
+        <span class="glyphicon glyphicon-search"></span>
       </div>
 
 
-      <ul class="nav navbar-nav navbar-right">
+      <ul (click)=mostrar() class="nav navbar-nav navbar-right">
         <li>
-          <a href="#">Desplegable</a>
+          
+        
+          <span class="badge">3</span>
+          <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+       
         </li>
 
       </ul>
@@ -43,6 +45,7 @@
   <!-- /.container-fluid -->
 </nav>
 <!-- {{producto|json}}-->
+<div class="container">
 <div class="row">
  
     <div *ngFor="let producto of productos | filter: searchText" class="thumbnail col-sm-4">
@@ -56,8 +59,8 @@
       <div class="caption">
        
 
-        <p id="precio">{{producto.precio}} €
-          <span *ngIf="producto.oferta>0">{{producto.oferta}} €</span> <!--Si la oferta es mayor que cero aparece en pantalla si nos no aparece -->
+        <p> <span [ngClass]="producto.oferta>0 ? 'PrecioTachado' : 'precio'">{{producto.precio}} €</span>
+          <span id="oferta" *ngIf="producto.oferta>0">{{producto.oferta}} €</span> <!--Si la oferta es mayor que cero aparece en pantalla si nos no aparece -->
         </p>
         <p id="descripcion">({{producto.descripcion}})</p>
         <p id="nombre">{{producto.nombre}}</p>
@@ -76,5 +79,6 @@
         </p>
       </div>
     </div>
-  
+  </div>
 </div>
+
