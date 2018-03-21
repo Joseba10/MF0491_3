@@ -37,10 +37,7 @@ export class SupermercadoComponent implements OnInit
           }
   //Metodo para restar la cantidad de productos que quieres
   restar(producto) {
-      
-          
      
-            
              //Si la cantidad es igual que 1 no hace nada,si es mayor resta la cantidad 1 vez
             if( producto.cantidad<=1)
                {
