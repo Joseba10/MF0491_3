@@ -15,6 +15,7 @@ export class SupermercadoComponent implements OnInit
   carrito:Producto[];
   //Campo del Filtro
   searchText: string;
+  show: boolean;
 
   constructor(public productoService: ProductosService)
 
@@ -56,7 +57,7 @@ export class SupermercadoComponent implements OnInit
   mostrar(){
 
     console.log("mostrando contenido");
-
+    this.show = !this.show;
   }    
 
   agregarCarrito(producto){
